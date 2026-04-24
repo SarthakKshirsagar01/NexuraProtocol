@@ -1,6 +1,7 @@
 ﻿[workspace]
 resolver = "2"
 members = [
+  "contracts/escrow_vault",
   "contracts/invoice_factory",
 ]
 
