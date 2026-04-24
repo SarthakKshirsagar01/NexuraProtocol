@@ -1,67 +1,67 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
-import * as StellarSdk from "@stellar/stellar-sdk";
+import { useState } from "react";
+import { useWallet } from "@/hooks/useWallet";
 
 export default function CreateInvoice() {
-  const [buyer, setBuyer] = useState("");
+  const { publicKey, connected, connect, disconnect, loading } = useWallet();
   const [seller, setSeller] = useState("");
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
-  const [txHash, setTxHash] = useState("");
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Creating invoice...");
-
-    try {
-      if (
-        !StellarSdk.StrKey.isValidEd25519PublicKey(buyer) ||
-        !StellarSdk.StrKey.isValidEd25519PublicKey(seller)
-      ) {
-        setStatus("❌ Buyer and seller must be valid Stellar public keys");
-        return;
-      }
-
-      if (Number(amount) <= 0 || !description.trim()) {
-        setStatus("❌ Amount must be positive and description is required");
-        return;
-      }
-
-      const freighter = (window as any).freighter;
-      if (!freighter) {
-        setStatus("❌ Please install Freighter wallet");
-        return;
-      }
-
-      const { isConnected } = await freighter.isConnected();
-      if (!isConnected) {
-        setStatus("❌ Please connect Freighter wallet");
-        return;
-      }
-
-      await freighter.getNetwork();
-      const publicKey = await freighter.getPublicKey();
-
-      setStatus(`✓ Connected: ${publicKey.slice(0, 8)}...`);
-
-      const invoiceId = Math.floor(Math.random() * 10000);
-
-      setStatus(`✅ Invoice #${invoiceId} created on Stellar Testnet`);
-      setTxHash(`Simulated-TX-${invoiceId}`);
-    } catch (error: any) {
-      setStatus(`❌ Error: ${error.message}`);
+    if (!connected) {
+      alert("Please connect your wallet first");
+      return;
     }
+
+    setStatus("Creating invoice on Stellar Testnet...");
+
+    // Simulate contract call (replace with real Soroban contract call in production)
+    setTimeout(() => {
+      const invoiceId = Math.floor(Math.random() * 10000);
+      setStatus(
+        `✅ Invoice #${invoiceId} created! Buyer: ${publicKey.slice(0, 8)}...`,
+      );
+    }, 2000);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-8">
-      <div className="max-w-2xl mx-auto w-full">
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-          <h1 className="text-3xl font-bold text-white mb-2">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8">
+      <div className="max-w-2xl mx-auto">
+        {/* Wallet Connection Header */}
+        <div className="mb-6 flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-white">
             Create Smart Invoice
           </h1>
+          {connected ? (
+            <div className="flex items-center gap-3">
+              <div className="bg-green-500/20 border border-green-500/50 px-4 py-2 rounded-lg">
+                <p className="text-green-400 text-sm font-mono">
+                  {publicKey.slice(0, 4)}...{publicKey.slice(-4)}
+                </p>
+              </div>
+              <button
+                onClick={disconnect}
+                className="bg-red-500/20 hover:bg-red-500/30 border border-red-500/50 text-red-400 px-4 py-2 rounded-lg text-sm transition-all"
+              >
+                Disconnect
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={connect}
+              disabled={loading}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50"
+            >
+              {loading ? "Connecting..." : "Connect Freighter"}
+            </button>
+          )}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <p className="text-slate-300 mb-8">
             Lock funds in escrow on Stellar Testnet
           </p>
@@ -69,15 +69,13 @@ export default function CreateInvoice() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-slate-200 mb-2">
-                Buyer Address (Stellar G...)
+                Buyer (Your Wallet)
               </label>
               <input
                 type="text"
-                value={buyer}
-                onChange={(e) => setBuyer(e.target.value)}
-                placeholder="GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-                className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                required
+                value={connected ? publicKey : "Connect wallet first"}
+                disabled
+                className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-slate-400 font-mono text-sm"
               />
             </div>
 
@@ -126,42 +124,20 @@ export default function CreateInvoice() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/50"
+              disabled={!connected}
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Create Invoice & Lock Escrow
+              {connected
+                ? "Create Invoice & Lock Escrow"
+                : "Connect Wallet to Continue"}
             </button>
           </form>
 
           {status && (
             <div className="mt-6 p-4 bg-white/5 border border-white/20 rounded-lg">
               <p className="text-slate-200 text-sm">{status}</p>
-              {txHash && (
-                <a
-                  href={`https://testnet.stellarchain.io/transactions/${txHash}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-purple-300 text-sm underline mt-2 inline-block"
-                >
-                  View on Explorer →
-                </a>
-              )}
             </div>
           )}
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-            <p className="text-2xl font-bold text-white">0</p>
-            <p className="text-slate-400 text-sm">Total Invoices</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-            <p className="text-2xl font-bold text-white">0 XLM</p>
-            <p className="text-slate-400 text-sm">Locked in Escrow</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-            <p className="text-2xl font-bold text-white">~5s</p>
-            <p className="text-slate-400 text-sm">Avg Settlement</p>
-          </div>
         </div>
       </div>
     </div>
