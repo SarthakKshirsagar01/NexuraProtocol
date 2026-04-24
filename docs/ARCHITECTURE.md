@@ -8,79 +8,69 @@ Nexura Protocol is a trustless smart invoice ecosystem built on Stellar that sol
 
 ## Layer Architecture
 
-                        ┌──────────────────────────────┐
-                        │        👤 User (Buyer/Seller) │
-                        └──────────────┬───────────────┘
-                                       │
-                                       ▼
-                        ┌──────────────────────────────┐
-                        │     🌐 Frontend (Next.js)     │
-                        │  - UI / Dashboard             │
-                        │  - Invoice Creation           │
-                        │  - Wallet Interaction         │
-                        └──────────────┬───────────────┘
-                                       │
-                                       ▼
-                        ┌──────────────────────────────┐
-                        │ 🔐 Wallet Layer (Freighter)  │
-                        │  - Transaction Signing       │
-                        │  - Secure Auth               │
-                        └──────────────┬───────────────┘
-                                       │
-                                       ▼
+            👤 User (Buyer / Seller)
+                     │
+                     ▼
+            🌐 Frontend (Next.js)
+         (UI, Invoice, Dashboard)
+                     │
+                     ▼
+          🔐 Wallet (Freighter)
+         (Auth + Tx Signing)
+                     │
+                     ▼
 
-═══════════════════════════════════════════════════════════════
-⚡ STELLAR BLOCKCHAIN (SOROBAN VM)
-═══════════════════════════════════════════════════════════════
+=================================================
+⚡ STELLAR (Soroban Smart Contracts)
+=================================================
 │
-┌──────────────────────────────┼──────────────────────────────┐
+┌───────────────┼───────────────┐
 │ │ │
 ▼ ▼ ▼
 
-┌──────────────────────┐ ┌──────────────────────┐ ┌──────────────────────┐
-│ 📄 InvoiceFactory │ │ 🔒 EscrowVault │ │ 🧾 OracleVerifier │
-│----------------------│ │----------------------│ │----------------------│
-│ - Create Invoice │ │ - Lock Funds │ │ - Verify Delivery │
-│ - Store Metadata │ │ - Hold Escrow │ │ - 2/3 Multisig │
-│ - Emit Events │ │ - Release Payment │ │ - Approval Logic │
-└──────────┬───────────┘ └──────────┬───────────┘ └──────────┬───────────┘
-│ │ │
-└──────────────┬───────────┴──────────────┬───────────┘
-▼ ▼
+📄 InvoiceFactory 🔒 EscrowVault 🧾 OracleVerifier
 
-                ┌──────────────────────────────┐
-                │ 💰 Token Layer               │
-                │ - XLM                        │
-                │ - USDC (SEP-41)              │
-                └──────────────────────────────┘
+---
+
+Create Invoice Lock Funds Verify Delivery
+Store Metadata Hold Escrow 2/3 Multisig
+Emit Events Release Funds Approval Logic
+
+     └───────────────┬───────────────┘
+                     ▼
+              💰 Token Layer
+             (XLM + USDC)
 
 ## Invoice Lifecycle Flow
 
-[1] Buyer creates invoice
+Buyer
 │
 ▼
-📄 InvoiceFactory Contract
+Create Invoice
 │
 ▼
-[2] Invoice stored on-chain + Event emitted
+📄 InvoiceFactory
 │
 ▼
-[3] Buyer locks funds
+Invoice Stored On-Chain
 │
 ▼
-🔒 EscrowVault Contract
+Lock Funds
 │
 ▼
-[4] Oracle verifies delivery
+🔒 EscrowVault
 │
 ▼
-🧾 OracleVerifier (2/3 approvals)
+Verify Delivery
 │
 ▼
-[5] Funds released to Seller
+🧾 OracleVerifier (2/3)
 │
 ▼
-💰 Seller receives payment
+Release Payment
+│
+▼
+Seller Receives Funds
 
 ## Project Structure (Code-Level)
 
