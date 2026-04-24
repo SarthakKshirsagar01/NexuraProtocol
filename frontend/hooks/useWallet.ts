@@ -1,12 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  isConnected,
-  getAddress,
-  requestAccess,
-  signTransaction,
-} from "@stellar/freighter-api";
+import { isConnected, getAddress, requestAccess } from "@stellar/freighter-api";
 
 export function useWallet() {
   const [publicKey, setPublicKey] = useState<string>("");
@@ -22,9 +17,7 @@ export function useWallet() {
       const { isConnected: walletConnected } = await isConnected();
       if (walletConnected) {
         const { address, error } = await getAddress();
-        if (error || !address) {
-          return;
-        }
+        if (error || !address) return;
         setPublicKey(address);
         setConnected(true);
       }
@@ -38,9 +31,8 @@ export function useWallet() {
     try {
       const { address, error } = await requestAccess();
       if (error) {
-        throw new Error(error.message || "Wallet access request failed");
+        throw new Error(error.message || "Failed to connect wallet");
       }
-
       if (address) {
         setPublicKey(address);
         setConnected(true);
@@ -56,12 +48,5 @@ export function useWallet() {
     setConnected(false);
   };
 
-  return {
-    publicKey,
-    connected,
-    loading,
-    connect,
-    disconnect,
-    signTransaction,
-  };
+  return { publicKey, connected, loading, connect, disconnect };
 }
