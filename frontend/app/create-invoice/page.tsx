@@ -29,23 +29,23 @@ export default function CreateInvoice() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 sm:p-6 md:p-8">
       <div className="max-w-2xl mx-auto">
         {/* Wallet Connection Header */}
-        <div className="mb-6 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-white">
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white">
             Create Smart Invoice
           </h1>
           {connected ? (
-            <div className="flex items-center gap-3">
-              <div className="bg-green-500/20 border border-green-500/50 px-4 py-2 rounded-lg">
-                <p className="text-green-400 text-sm font-mono">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 w-full sm:w-auto">
+              <div className="bg-green-500/20 border border-green-500/50 px-4 py-2 rounded-lg w-full sm:w-auto">
+                <p className="text-green-400 text-xs sm:text-sm font-mono break-all">
                   {publicKey.slice(0, 4)}...{publicKey.slice(-4)}
                 </p>
               </div>
               <button
                 onClick={disconnect}
-                className="bg-red-500/20 hover:bg-red-500/30 border border-red-500/50 text-red-400 px-4 py-2 rounded-lg text-sm transition-all"
+                className="bg-red-500/20 hover:bg-red-500/30 border border-red-500/50 text-red-400 px-4 py-2 rounded-lg text-sm transition-all w-full sm:w-auto"
               >
                 Disconnect
               </button>
@@ -54,15 +54,15 @@ export default function CreateInvoice() {
             <button
               onClick={connect}
               disabled={loading}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 w-full sm:w-auto"
             >
               {loading ? "Connecting..." : "Connect Freighter"}
             </button>
           )}
         </div>
 
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-          <p className="text-slate-300 mb-8">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-5 sm:p-8 border border-white/20">
+          <p className="text-slate-300 mb-6 sm:mb-8 text-sm sm:text-base">
             Lock funds in escrow on Stellar Testnet
           </p>
 
@@ -75,7 +75,7 @@ export default function CreateInvoice() {
                 type="text"
                 value={connected ? publicKey : "Connect wallet first"}
                 disabled
-                className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-slate-400 font-mono text-sm"
+                className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-slate-400 font-mono text-xs sm:text-sm break-all"
               />
             </div>
 
@@ -135,7 +135,7 @@ export default function CreateInvoice() {
 
           {status && (
             <div className="mt-6 p-4 bg-white/5 border border-white/20 rounded-lg">
-              <p className="text-slate-200 text-sm">{status}</p>
+              <p className="text-slate-200 text-sm break-words">{status}</p>
             </div>
           )}
         </div>
