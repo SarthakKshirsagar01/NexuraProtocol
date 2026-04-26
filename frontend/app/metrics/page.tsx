@@ -13,28 +13,16 @@ type IndexedEvent = {
 };
 
 export default function Metrics() {
-  const [stats, setStats] = useState({
-    totalUsers: 0,
-    totalInvoices: 0,
-    totalVolume: 0,
-    avgResponseTime: 0,
-    errorRate: 0,
+  const [stats] = useState({
+    totalUsers: 32,
+    totalInvoices: 45,
+    totalVolume: 12500,
+    avgResponseTime: 1.2,
+    errorRate: 0.5,
   });
   const [events, setEvents] = useState<IndexedEvent[]>([]);
   const [eventsLoading, setEventsLoading] = useState(true);
   const [eventsError, setEventsError] = useState('');
-
-  useEffect(() => {
-    // Simulate fetching metrics
-    // In production, this would call your backend API
-    setStats({
-      totalUsers: 32,
-      totalInvoices: 45,
-      totalVolume: 12500,
-      avgResponseTime: 1.2,
-      errorRate: 0.5,
-    });
-  }, []);
 
   useEffect(() => {
     const loadIndexedEvents = async () => {

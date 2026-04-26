@@ -123,7 +123,7 @@ export default function Home() {
                   A farmer supplies 100kg of wheat to a retailer. Instead of
                   waiting 30 days, the retailer{" "}
                   <strong className="text-white">
-                    locks 500 XLM in Nexura's escrow contract
+                    locks 500 XLM in Nexura&apos;s escrow contract
                   </strong>
                   . The farmer delivers the goods, the delivery is verified via
                   oracle, and the farmer{" "}

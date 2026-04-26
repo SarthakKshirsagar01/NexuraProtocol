@@ -102,7 +102,7 @@ export function TransactionStatus({
               <p className="text-red-400 text-xs font-mono">{error}</p>
               <p className="text-slate-400 text-xs mt-2">Common fixes:</p>
               <ul className="text-slate-400 text-xs mt-1 space-y-1 list-disc list-inside">
-                <li>Ensure you're on Stellar Testnet</li>
+                <li>Ensure you&apos;re on Stellar Testnet</li>
                 <li>Check your XLM balance</li>
                 <li>Refresh and try again</li>
               </ul>

@@ -68,9 +68,11 @@ export default function CreateInvoice() {
         setDueDate("");
         setTxStatus("idle");
       }, 5000);
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const message =
+        err instanceof Error ? err.message : "Transaction failed";
       setTxStatus("error");
-      setError(err.message || "Transaction failed");
+      setError(message);
       showToast("Transaction failed. Please try again.", "error");
     }
   };

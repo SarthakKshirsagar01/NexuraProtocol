@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import type { ToastItem, ToastType } from "@/hooks/useToast";
 
 interface ToastProps {
   id: number;
   message: string;
-  type: "success" | "error" | "info" | "warning";
+  type: ToastType;
   onClose: (id: number) => void;
 }
 
@@ -62,7 +63,7 @@ export function ToastContainer({
   toasts,
   onClose,
 }: {
-  toasts: any[];
+  toasts: ToastItem[];
   onClose: (id: number) => void;
 }) {
   return (

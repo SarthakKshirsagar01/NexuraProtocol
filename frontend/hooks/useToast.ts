@@ -4,14 +4,14 @@ import { useState, useCallback } from "react";
 
 export type ToastType = "success" | "error" | "info" | "warning";
 
-interface Toast {
+export interface ToastItem {
   id: number;
   message: string;
   type: ToastType;
 }
 
 export function useToast() {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+  const [toasts, setToasts] = useState<ToastItem[]>([]);
 
   const showToast = useCallback((message: string, type: ToastType = "info") => {
     const id = Date.now();

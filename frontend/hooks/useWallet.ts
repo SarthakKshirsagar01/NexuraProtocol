@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { isConnected, getAddress, requestAccess } from "@stellar/freighter-api";
 
 export function useWallet() {
@@ -9,22 +9,24 @@ export function useWallet() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    checkConnection();
-  }, []);
+    const timer = setTimeout(() => {
+      void (async () => {
+        try {
+          const { isConnected: walletConnected } = await isConnected();
+          if (walletConnected) {
+            const { address, error } = await getAddress();
+            if (error || !address) return;
+            setPublicKey(address);
+            setConnected(true);
+          }
+        } catch (error) {
+          console.error("Wallet check failed:", error);
+        }
+      })();
+    }, 0);
 
-  const checkConnection = async () => {
-    try {
-      const { isConnected: walletConnected } = await isConnected();
-      if (walletConnected) {
-        const { address, error } = await getAddress();
-        if (error || !address) return;
-        setPublicKey(address);
-        setConnected(true);
-      }
-    } catch (error) {
-      console.error("Wallet check failed:", error);
-    }
-  };
+    return () => clearTimeout(timer);
+  }, []);
 
   const connect = async () => {
     setLoading(true);
@@ -37,8 +39,10 @@ export function useWallet() {
         setPublicKey(address);
         setConnected(true);
       }
-    } catch (error: any) {
-      alert(error.message || "Failed to connect wallet");
+    } catch (error: unknown) {
+      const message =
+        error instanceof Error ? error.message : "Failed to connect wallet";
+      alert(message);
     }
     setLoading(false);
   };
