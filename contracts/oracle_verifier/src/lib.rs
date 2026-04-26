@@ -75,6 +75,11 @@ impl OracleVerifier {
             .get(&DataKey::Verification(invoice_id))
             .unwrap_or(0)
     }
+
+    pub fn require_approvals(env: Env, invoice_id: u64, required_approvals: u32) -> bool {
+        let count = Self::get_verification_count(env, invoice_id);
+        count >= required_approvals
+    }
 }
 
 #[cfg(test)]
@@ -101,5 +106,26 @@ mod test {
 
         assert_eq!(client.verify_delivery(&1, &v2, &true), true);
         assert_eq!(client.get_verification_count(&1), 2);
+    }
+
+    #[test]
+    fn test_require_approvals() {
+        let env = Env::default();
+        env.mock_all_auths();
+
+        let v1 = Address::generate(&env);
+        let v2 = Address::generate(&env);
+
+        let contract_id = env.register_contract(None, OracleVerifier);
+        let client = OracleVerifierClient::new(&env, &contract_id);
+
+        client.initialize(&vec![&env, v1.clone(), v2.clone()], &2);
+
+        assert_eq!(client.require_approvals(&42, &1), false);
+        assert_eq!(client.verify_delivery(&42, &v1, &true), false);
+        assert_eq!(client.require_approvals(&42, &1), true);
+        assert_eq!(client.require_approvals(&42, &2), false);
+        assert_eq!(client.verify_delivery(&42, &v2, &true), true);
+        assert_eq!(client.require_approvals(&42, &2), true);
     }
 }
