@@ -1,0 +1,18 @@
+type Invoice @entity {
+  id: ID!
+  invoiceId: BigInt!
+  buyer: Bytes!
+  seller: Bytes!
+  amount: BigInt!
+  status: String!
+  createdAt: BigInt!
+  releasedAt: BigInt
+}
+
+type EscrowEvent @entity {
+  id: ID!
+  invoiceId: BigInt!
+  eventType: String!
+  amount: BigInt!
+  timestamp: BigInt!
+}

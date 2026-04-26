@@ -66,6 +66,21 @@ See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for deployment details.
 
 ---
 
+## Data Indexing
+
+**Approach:** Custom event indexer using Stellar Horizon API
+
+**Endpoint:** https://nexura-protocol.vercel.app/api/index-events
+
+**What it indexes:**
+- Invoice creation events
+- Escrow lock events
+- Payment release events
+- Oracle verification events
+
+**Dashboard:** Integrated in /metrics page showing real-time activity feed
+
+---
 ## 👥 Three Roles, One System
 
 **👤 Buyer**
@@ -304,3 +319,4 @@ MIT — see [LICENSE](./LICENSE)
 
 Built for the **Stellar Journey to Mastery: Monthly Builder Challenges**  
 Level 5 (Blue Belt) Submission
+

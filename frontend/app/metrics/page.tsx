@@ -2,6 +2,16 @@
 
 import { useState, useEffect } from 'react';
 
+type IndexedEvent = {
+  id: string;
+  eventType: string;
+  source: string;
+  amount: string | null;
+  transactionHash: string | null;
+  createdAt: string;
+  successful: boolean;
+};
+
 export default function Metrics() {
   const [stats, setStats] = useState({
     totalUsers: 0,
@@ -10,6 +20,9 @@ export default function Metrics() {
     avgResponseTime: 0,
     errorRate: 0,
   });
+  const [events, setEvents] = useState<IndexedEvent[]>([]);
+  const [eventsLoading, setEventsLoading] = useState(true);
+  const [eventsError, setEventsError] = useState('');
 
   useEffect(() => {
     // Simulate fetching metrics
@@ -21,6 +34,28 @@ export default function Metrics() {
       avgResponseTime: 1.2,
       errorRate: 0.5,
     });
+  }, []);
+
+  useEffect(() => {
+    const loadIndexedEvents = async () => {
+      try {
+        setEventsLoading(true);
+        const response = await fetch('/api/index-events', { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error(`Failed to fetch indexed events (${response.status})`);
+        }
+        const data = await response.json();
+        const incomingEvents = Array.isArray(data?.events) ? data.events : [];
+        setEvents(incomingEvents.slice(0, 6));
+      } catch (error) {
+        const message = error instanceof Error ? error.message : 'Failed to load indexed events';
+        setEventsError(message);
+      } finally {
+        setEventsLoading(false);
+      }
+    };
+
+    loadIndexedEvents();
   }, []);
 
   return (
@@ -94,36 +129,33 @@ export default function Metrics() {
 
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6">
             <h2 className="text-xl font-bold text-white mb-4">Recent Activity</h2>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3 text-sm">
-                <span className="text-green-400">OK</span>
-                <div className="flex-1">
-                  <p className="text-white">Invoice #1045 created</p>
-                  <p className="text-slate-400 text-xs">2 minutes ago</p>
-                </div>
+            {eventsLoading && <p className="text-slate-400 text-sm">Loading indexed events...</p>}
+            {!eventsLoading && eventsError && (
+              <p className="text-red-400 text-sm">Unable to load events: {eventsError}</p>
+            )}
+            {!eventsLoading && !eventsError && events.length === 0 && (
+              <p className="text-slate-400 text-sm">No recent indexed events found.</p>
+            )}
+            {!eventsLoading && !eventsError && events.length > 0 && (
+              <div className="space-y-3">
+                {events.map((event) => (
+                  <div key={event.id} className="flex items-start gap-3 text-sm">
+                    <span className={event.successful ? 'text-green-400' : 'text-yellow-400'}>
+                      {event.successful ? 'OK' : 'WARN'}
+                    </span>
+                    <div className="flex-1">
+                      <p className="text-white">
+                        {event.eventType}
+                        {event.amount ? ` - ${event.amount} XLM` : ''}
+                      </p>
+                      <p className="text-slate-400 text-xs">
+                        {new Date(event.createdAt).toLocaleString()}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-start gap-3 text-sm">
-                <span className="text-green-400">OK</span>
-                <div className="flex-1">
-                  <p className="text-white">Payment released: 500 XLM</p>
-                  <p className="text-slate-400 text-xs">8 minutes ago</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 text-sm">
-                <span className="text-green-400">OK</span>
-                <div className="flex-1">
-                  <p className="text-white">New user registered</p>
-                  <p className="text-slate-400 text-xs">12 minutes ago</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 text-sm">
-                <span className="text-blue-400">INFO</span>
-                <div className="flex-1">
-                  <p className="text-white">Oracle verification pending</p>
-                  <p className="text-slate-400 text-xs">15 minutes ago</p>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
