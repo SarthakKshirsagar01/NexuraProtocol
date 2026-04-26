@@ -287,15 +287,15 @@ stellar contract deploy \
 | Commit    | Description                                                            |
 | --------- | ---------------------------------------------------------------------- |
 | `5fdae82` | feat: init soroban workspace with invoice_factory contract             |
-| `[HASH]`  | feat: implement escrow_vault lock and release with overflow protection |
-| `[HASH]`  | feat: add oracle_verifier with 2-of-3 multisig delivery confirmation   |
-| `[HASH]`  | feat: init Next.js 15 frontend with Stellar SDK                        |
-| `[HASH]`  | feat: add Freighter wallet connect/disconnect                          |
-| `[HASH]`  | feat: role-based dashboard with financial stats                        |
-| `[HASH]`  | feat: transaction feedback system with toast notifications             |
-| `[HASH]`  | feat: mobile-responsive design                                         |
-| `[HASH]`  | feat: improve core messaging with sharper value prop                   |
-| `[HASH]`  | docs: add comprehensive documentation                                  |
+| `47155dd` | feat: implement escrow_vault lock and release with overflow protection |
+| `cf17565` | feat: add oracle_verifier with 2-of-3 multisig delivery confirmation   |
+| `802d5b5` | feat: init Next.js 15 frontend with Stellar SDK                        |
+| `9d90ea9` | feat: add Freighter wallet connect/disconnect                          |
+| `17b1bf6` | feat: role-based dashboard with financial stats                        |
+| `d928948` | feat: transaction feedback system with toast notifications             |
+| `2abedd0` | feat: mobile-responsive design                                         |
+| `f553d23` | feat: improve core messaging with sharper value prop                   |
+| `62e065f` | docs: add comprehensive documentation                                  |
 
 **Total: 12+ commits** ✅
 
