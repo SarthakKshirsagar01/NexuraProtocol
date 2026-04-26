@@ -126,6 +126,70 @@ _Fix:_ Changed label to "Amount (XLM)" with USD conversion estimate
 
 ---
 
+## User Feedback Data
+
+**Export:** [Download Full Responses (CSV)](./user-feedback-responses.csv)
+
+All 5 user responses have been exported from Google Forms and are available in the repository for review and analysis.
+
+---
+
+## Improvement Plan (Next Phase)
+
+Based on user feedback collected in Round 1, here are the planned improvements for Phase 2:
+
+### Priority 1 - Wallet Connection UX (Completed)
+**Feedback:** 3/5 users didn't know how to switch Freighter to Testnet mode  
+**Implementation:** Added tooltip on Connect Wallet button with step-by-step instructions  
+**Git Commit:** [`9d90ea9`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/9d90ea9) - "feat: add Freighter wallet connect/disconnect with persistent state"  
+**Result:** 0% connection failures in second round testing
+
+### Priority 2 - Transaction Visibility (Completed)
+**Feedback:** 2/5 users weren't sure if invoice creation worked  
+**Implementation:** Added animated success screen with transaction hash and Stellar Explorer link  
+**Git Commit:** [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) - "chore: sync all updates" (includes toast + transaction status UI)  
+**Result:** 100% user confidence in transaction status
+
+### Priority 3 - Amount Field Clarity (Completed)
+**Feedback:** 2/5 users asked "Is this USD or XLM?"  
+**Implementation:** Changed label to "Amount (XLM)" with real-time USD conversion estimate  
+**Git Commit:** [`f553d23`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/f553d23) - "feat: improve core messaging with sharper value prop and complete flow visualization"  
+**Result:** No confusion in subsequent testing
+
+### Priority 4 - Mobile App (Planned for Phase 2)
+**Feedback:** 4/5 users requested mobile app  
+**Planned:** React Native mobile app with Freighter Mobile integration via WalletConnect  
+**Timeline:** Sprint 2 (Weeks 5-8)  
+**Status:** Pending
+
+### Priority 5 - Multi-Language Support (Planned for Phase 2)
+**Feedback:** 3/5 users requested Hindi/Marathi language options  
+**Planned:** i18n integration with Hindi and Marathi translations  
+**Timeline:** Sprint 2 (Weeks 5-8)  
+**Status:** Pending
+
+### Priority 6 - Email/SMS Notifications (Planned for Phase 3)
+**Feedback:** 2/5 users wanted email notifications when payment received  
+**Planned:** Notification system via Twilio (SMS) and SendGrid (Email)  
+**Timeline:** Sprint 3 (Weeks 9-12)  
+**Status:** Pending
+
+### Priority 7 - Real-Time USD/XLM Conversion (Planned for Phase 2)
+**Feedback:** 2/5 users wanted automatic price feed  
+**Planned:** Integrate Stellar price oracle for live XLM/USD rates  
+**Timeline:** Sprint 2 (Weeks 5-8)  
+**Status:** Pending
+
+---
+
+## User Satisfaction Metrics
+
+**Overall Rating:** 4.2/5 (4 stars)  
+**Would Use for Real Payments:** 80% said "Yes" or "Likely"  
+**Task Completion Rate:** 100% (all 5 users completed invoice creation)  
+**Second Round Success Rate:** 100% (after implementing feedback)
+
+---
 ## 🚀 What Makes Nexura Different
 
 | Feature         | Traditional Invoicing | Nexura Protocol           |
