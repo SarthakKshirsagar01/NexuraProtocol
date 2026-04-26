@@ -43,7 +43,7 @@ A farmer supplies 100kg of wheat to a retailer. Instead of waiting 30 days, the 
 
 ## 🏗️ Architecture
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for full technical blueprint.
+See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for full technical blueprint.
 
 **Tech Stack:**
 
@@ -108,7 +108,7 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for full technical blueprint.
 
 **Total Responses:** 5 | **Completion Rate:** 100%
 
-See [FEEDBACK.md](./FEEDBACK.md) for full documentation.
+See [FEEDBACK.md](./docs/FEEDBACK.md) for full documentation.
 
 ### Key Issues & Iteration
 
