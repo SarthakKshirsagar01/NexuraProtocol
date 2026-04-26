@@ -89,6 +89,12 @@ export default function CreateInvoice() {
             >
               ← Back to Dashboard
             </Link>
+            <Link
+              href="/metrics"
+              className="text-slate-400 hover:text-white text-sm mb-2 ml-4 inline-block"
+            >
+              View Metrics
+            </Link>
             <h1 className="text-3xl font-bold text-white">
               Create Smart Invoice
             </h1>
@@ -281,3 +287,4 @@ export default function CreateInvoice() {
     </div>
   );
 }
+

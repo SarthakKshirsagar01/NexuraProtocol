@@ -66,6 +66,20 @@ export default function Dashboard() {
             <p className="text-slate-400 text-xs sm:text-sm">Powered by Stellar • Secured by Soroban</p>
           </div>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div className="flex items-center gap-2">
+              <Link
+                href="/metrics"
+                className="bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 text-blue-300 px-3 py-2 rounded-lg text-xs sm:text-sm transition-all text-center"
+              >
+                Metrics
+              </Link>
+              <Link
+                href="/create-invoice"
+                className="bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/50 text-purple-300 px-3 py-2 rounded-lg text-xs sm:text-sm transition-all text-center"
+              >
+                Create Invoice
+              </Link>
+            </div>
             <div className="bg-white/5 border border-white/20 px-4 py-2 rounded-lg">
               <p className="text-green-400 text-xs sm:text-sm font-mono break-all">
                 {publicKey.slice(0, 6)}...{publicKey.slice(-4)}

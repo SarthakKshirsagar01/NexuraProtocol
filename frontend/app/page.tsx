@@ -3,6 +3,25 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-6">
+        <nav className="flex items-center justify-between bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+          <Link href="/" className="text-white font-semibold">
+            Nexura
+          </Link>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href="/dashboard" className="text-slate-300 hover:text-white transition-colors">
+              Dashboard
+            </Link>
+            <Link href="/metrics" className="text-slate-300 hover:text-white transition-colors">
+              Metrics
+            </Link>
+            <Link href="/create-invoice" className="text-slate-300 hover:text-white transition-colors">
+              Create Invoice
+            </Link>
+          </div>
+        </nav>
+      </div>
+
       {/* Hero Section */}
       <div className="flex items-center justify-center min-h-screen p-4 sm:p-8">
         <div className="text-center max-w-5xl">
