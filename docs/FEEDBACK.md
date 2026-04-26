@@ -16,7 +16,7 @@
 
 | # | Role | Stellar Testnet Address | Explorer Link |
 |---|------|-------------------------|---------------|
-| 1 | Buyer | `GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1` | [View](https://stellar.expert/explorer/testnet/account/GXXX1) |
+| 1 | Buyer | `GDHWXGMJVAYCHUWDATDMANHES3IFQOI2I5DNI7I43DZILSKSECBMQFOH` | [View](https://stellar.expert/explorer/testnet/account/GDHWXGMJVAYCHUWDATDMANHES3IFQOI2I5DNI7I43DZILSKSECBMQFOH) |
 | 2 | Vendor | `GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2` | [View](https://stellar.expert/explorer/testnet/account/GXXX2) |
 | 3 | Buyer | `GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX3` | [View](https://stellar.expert/explorer/testnet/account/GXXX3) |
 | 4 | Vendor | `GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4` | [View](https://stellar.expert/explorer/testnet/account/GXXX4) |
