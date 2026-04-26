@@ -55,7 +55,8 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for full technical blueprint.
 | Wallet          | Freighter (browser extension) |
 | Deployment      | Vercel                        |
 
-**Deployed Contracts (Stellar Testnet):**
+**Deployed Contracts (Stellar Testnet):** 
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for full documentation.
 
 | Contract       | Address                                                    | Explorer                                                                                                          |
 | -------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
