@@ -123,6 +123,7 @@ cd nexura-protocol
 # Install frontend dependencies
 cd frontend
 npm install
+cd ..
 
 # Set environment variables
 cp .env.example .env.local
@@ -133,6 +134,12 @@ npm run dev
 ```
 
 Open http://localhost:3000
+
+If you are using Windows PowerShell and see `npm.ps1 cannot be loaded`, run:
+
+```powershell
+npm.cmd run dev
+```
 
 ### Build Contracts
 

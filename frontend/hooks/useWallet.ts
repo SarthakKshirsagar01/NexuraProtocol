@@ -3,18 +3,6 @@
 import { useState, useEffect } from "react";
 import { isConnected, getAddress, requestAccess } from "@stellar/freighter-api";
 
-const connectWallet = async () => {
-  try {
-    const result = await albedo.publicKey({
-      token: "Nexura Login",
-    });
-
-    console.log("Public Key:", result.pubkey);
-  } catch (err) {
-    console.error(err);
-  }
-};
-
 export function useWallet() {
   const [publicKey, setPublicKey] = useState<string>("");
   const [connected, setConnected] = useState(false);
