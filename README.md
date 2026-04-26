@@ -214,21 +214,6 @@ Based on user feedback collected in Round 1, here are the planned improvements f
 - ✅ 5+ user testing completed
 - ✅ Feedback iteration
 
-### Phase 2 — Beta (Next)
-
-- Analytics dashboard with KPIs
-- 30+ user testing
-- Multi-language support (Hindi, Marathi)
-- Mobile-responsive improvements
-
-### Phase 3 — Production (Future)
-
-- Security audit (OtterSec / Kudelski)
-- Mainnet deployment
-- Optional yield generation via Blend Protocol
-- KYC/AML compliance layer
-- USDC stablecoin support
-
 ---
 
 ## 🛡️ Security
