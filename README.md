@@ -44,6 +44,7 @@ A farmer supplies 100kg of wheat to a retailer. Instead of waiting 30 days, the 
 ## 🏗️ Architecture
 
 See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for full technical blueprint.
+See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for deployment details.
 
 **Tech Stack:**
 
@@ -55,8 +56,7 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for full technical blueprint.
 | Wallet          | Freighter (browser extension) |
 | Deployment      | Vercel                        |
 
-**Deployed Contracts (Stellar Testnet):** 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for full documentation.
+**Deployed Contracts (Stellar Testnet):**
 
 | Contract       | Address                                                    | Explorer                                                                                                          |
 | -------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
