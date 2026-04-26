@@ -114,74 +114,25 @@ sequenceDiagram
 ```text
 NexuraProtocol/
 |-- contracts/
-|   |-- escrow_vault/
-|   |   |-- cargo.toml
-|   |   |-- src/
-|   |   |   `-- lib.rs
-|   |   `-- test_snapshots/
-|   |       `-- test/
-|   |           |-- test_double_release_protection.1.json
-|   |           `-- test_lock_and_release.1.json
 |   |-- invoice_factory/
-|   |   |-- Cargo.toml
-|   |   |-- lib.rs
-|   |   |-- src/
-|   |   |   `-- lib.rs
-|   |   `-- test_snapshots/
-|   |       `-- test/
-|   |           `-- test_create_invoice.1.json
+|   |   `-- src/lib.rs
+|   |-- escrow_vault/
+|   |   `-- src/lib.rs
 |   `-- oracle_verifier/
-|       |-- Cargo.toml
-|       |-- src/
-|       |   `-- lib.rs
-|       `-- test_snapshots/
-|           `-- test/
-|               `-- test_multisig_verification.1.json
+|       `-- src/lib.rs
+|-- frontend/
+|   |-- app/
+|   |   |-- page.tsx
+|   |   |-- layout.tsx
+|   |   |-- create-invoice/page.tsx
+|   |   `-- dashboard/page.tsx
+|   |-- components/
+|   |-- hooks/
+|   `-- public/
 |-- docs/
 |   |-- ARCHITECTURE.md
 |   |-- DEPLOYMENT.md
 |   `-- FEEDBACK.md
-|-- frontend/
-|   |-- app/
-|   |   |-- create-invoice/
-|   |   |   `-- page.tsx
-|   |   |-- dashboard/
-|   |   |   `-- page.tsx
-|   |   |-- favicon.ico
-|   |   |-- globals.css
-|   |   |-- layout.tsx
-|   |   `-- page.tsx
-|   |-- components/
-|   |   |-- InvoiceCard.tsx
-|   |   |-- StatusBadge.tsx
-|   |   |-- Toast.tsx
-|   |   `-- TransactionStatus.tsx
-|   |-- hooks/
-|   |   |-- useToast.ts
-|   |   `-- useWallet.ts
-|   |-- public/
-|   |   |-- file.svg
-|   |   |-- globe.svg
-|   |   |-- next.svg
-|   |   |-- vercel.svg
-|   |   `-- window.svg
-|   |-- .gitignore
-|   |-- AGENTS.md
-|   |-- CLAUDE.md
-|   |-- README.md
-|   |-- eslint.config.mjs
-|   |-- next.config.ts
-|   |-- package-lock.json
-|   |-- package.json
-|   |-- postcss.config.js
-|   |-- postcss.config.mjs
-|   |-- tailwind.config.js
-|   |-- tailwind.config.ts
-|   `-- tsconfig.json
-|-- .gitignore
-|-- Cargo.lock
-|-- Cargo.toml
 |-- README.md
-|-- package.json
-`-- test_output.txt
-```
+`-- .gitignore
+
