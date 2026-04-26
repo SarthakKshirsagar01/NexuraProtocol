@@ -36,7 +36,7 @@ A farmer supplies 100kg of wheat to a retailer. Instead of waiting 30 days, the 
 ## 🔗 Links
 
 - **Live Demo:** https://nexura-protocol.vercel.app
-- **Demo Video:** [YouTube Link - TO BE ADDED]
+- **Demo Video:** https://www.loom.com/share/67e516fd768c4c549d74c030d816642b
 - **User Feedback Form:** https://docs.google.com/forms/d/e/1FAIpQLSe7U4W5O8-o9fArtX_J8YxRUB3xucfnldfTb-h8IDzgEczsFQ/viewform
 
 ---
