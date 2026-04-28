@@ -5,6 +5,7 @@
 [![Live Demo](https://img.shields.io/badge/demo-live-success)](https://nexura-protocol.vercel.app)
 [![Network](https://img.shields.io/badge/network-Stellar%20Testnet-blue)](https://testnet.stellarchain.io)
 [![Contracts](https://img.shields.io/badge/contracts-Soroban-purple)](https://soroban.stellar.org)
+[![CI/CD](https://github.com/SarthakKshirsagar01/NexuraProtocol/actions/workflows/deploy.yml/badge.svg)](https://github.com/SarthakKshirsagar01/NexuraProtocol/actions)
 
 ---
 
