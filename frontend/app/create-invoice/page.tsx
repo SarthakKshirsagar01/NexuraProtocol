@@ -5,6 +5,7 @@ import { useWallet } from "@/hooks/useWallet";
 import { useToast } from "@/hooks/useToast";
 import { ToastContainer } from "@/components/Toast";
 import { TransactionStatus } from "@/components/TransactionStatus";
+import { analytics } from "@/lib/analytics";
 import Link from "next/link";
 
 export default function CreateInvoice() {
@@ -35,6 +36,9 @@ export default function CreateInvoice() {
     }
 
     try {
+      const startTime = Date.now();
+      const numericAmount = Number(amount) || 0;
+
       // Step 1: Awaiting signature
       setTxStatus("awaiting_signature");
       showToast("Check your Freighter wallet to sign the transaction", "info");
@@ -59,6 +63,20 @@ export default function CreateInvoice() {
         "Invoice created successfully! Funds locked in escrow.",
         "success",
       );
+      analytics.track("invoice_created", {
+        amount: numericAmount,
+        userId: publicKey,
+      });
+      analytics.track("funds_locked", {
+        invoiceId: mockTxHash,
+        amount: numericAmount,
+        userId: publicKey,
+      });
+      analytics.track("transaction_confirmed", {
+        txHash: mockTxHash,
+        duration: Date.now() - startTime,
+        userId: publicKey,
+      });
 
       // Reset form
       setTimeout(() => {

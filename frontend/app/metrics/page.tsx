@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { analytics } from '@/lib/analytics';
 
 type IndexedEvent = {
   id: string;
@@ -12,17 +13,27 @@ type IndexedEvent = {
   successful: boolean;
 };
 
+type MetricsState = {
+  totalUsers: number;
+  totalInvoices: number;
+  totalVolume: number;
+  avgResponseTime: number;
+};
+
 export default function Metrics() {
-  const [stats] = useState({
-    totalUsers: 32,
-    totalInvoices: 45,
-    totalVolume: 12500,
-    avgResponseTime: 1.2,
-    errorRate: 0.5,
+  const [metrics, setMetrics] = useState<MetricsState>({
+    totalUsers: 0,
+    totalInvoices: 0,
+    totalVolume: 0,
+    avgResponseTime: 0,
   });
   const [events, setEvents] = useState<IndexedEvent[]>([]);
   const [eventsLoading, setEventsLoading] = useState(true);
   const [eventsError, setEventsError] = useState('');
+
+  useEffect(() => {
+    setMetrics(analytics.getMetrics());
+  }, []);
 
   useEffect(() => {
     const loadIndexedEvents = async () => {
@@ -51,34 +62,30 @@ export default function Metrics() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-8">Metrics Dashboard</h1>
 
-        {/* Key Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6">
             <p className="text-slate-400 text-sm mb-2">Total Users</p>
-            <p className="text-4xl font-bold text-white">{stats.totalUsers}</p>
-            <p className="text-green-400 text-xs mt-2">up 12% from last week</p>
+            <p className="text-4xl font-bold text-white">{metrics.totalUsers}</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6">
             <p className="text-slate-400 text-sm mb-2">Total Invoices</p>
-            <p className="text-4xl font-bold text-white">{stats.totalInvoices}</p>
-            <p className="text-green-400 text-xs mt-2">up 8% from last week</p>
+            <p className="text-4xl font-bold text-white">{metrics.totalInvoices}</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6">
             <p className="text-slate-400 text-sm mb-2">Total Volume (XLM)</p>
-            <p className="text-4xl font-bold text-white">{stats.totalVolume.toLocaleString()}</p>
-            <p className="text-green-400 text-xs mt-2">up 25% from last week</p>
+            <p className="text-4xl font-bold text-white">{metrics.totalVolume.toLocaleString()}</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6">
             <p className="text-slate-400 text-sm mb-2">Avg Response Time</p>
-            <p className="text-4xl font-bold text-white">{stats.avgResponseTime}s</p>
-            <p className="text-green-400 text-xs mt-2">down 15% faster</p>
+            <p className="text-4xl font-bold text-white">
+              {(metrics.avgResponseTime / 1000).toFixed(2)}s
+            </p>
           </div>
         </div>
 
-        {/* System Health */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6">
             <h2 className="text-xl font-bold text-white mb-4">System Health</h2>
@@ -90,16 +97,6 @@ export default function Metrics() {
                 </div>
                 <div className="w-full bg-white/10 rounded-full h-2">
                   <div className="bg-green-500 h-2 rounded-full" style={{ width: '99.8%' }}></div>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between text-sm mb-2">
-                  <span className="text-slate-300">Error Rate</span>
-                  <span className="text-green-400">{stats.errorRate}%</span>
-                </div>
-                <div className="w-full bg-white/10 rounded-full h-2">
-                  <div className="bg-green-500 h-2 rounded-full" style={{ width: `${100 - stats.errorRate}%` }}></div>
                 </div>
               </div>
 
