@@ -56,6 +56,59 @@ See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for deployment details.
 | Wallet          | Freighter (browser extension) |
 | Deployment      | Vercel                        |
 
+## 🔗 Smart Contract Integration
+
+### Contract Addresses (Stellar Testnet)
+
+| Contract | Address | Source Code |
+|----------|---------|-------------|
+| InvoiceFactory | `CA3EIXJF43GIEYG3DQC7GNKREF7FK57YKUALLABDH66GRBLSCGYJCDMH` | [View](./contracts/invoice_factory/src/lib.rs) |
+| EscrowVault | `CCPIEXBMQ5ULOOZHDGRODRLEYCVWIGNHODBTJO4JQ25MIOHCONODAZBF` | [View](./contracts/escrow_vault/src/lib.rs) |
+| OracleVerifier | `CB7YB2EXLCPLEMEGXR7NJKEED22EID2VIGHL5OFTFH4PXZWLLNOOIJHW` | [View](./contracts/oracle_verifier/src/lib.rs) |
+
+### Frontend Integration
+
+The frontend communicates with deployed Soroban contracts via:
+
+**Integration Layer:** [`frontend/lib/contracts.ts`](./frontend/lib/contracts.ts)
+
+**Key Functions:**
+- `createInvoice()` - Calls InvoiceFactory contract
+- `lockFunds()` - Calls EscrowVault contract
+- `verifyDelivery()` - Calls OracleVerifier contract
+- `signAndSubmitTransaction()` - Signs via Freighter and submits to Stellar
+
+**Example Usage:**
+```typescript
+import { createInvoice, signAndSubmitTransaction } from '@/lib/contracts';
+
+// Create invoice via smart contract
+const { transaction } = await createInvoice({
+  buyer: 'GDHW...',
+  seller: 'GBXX...',
+  amount: '1000000000', // 100 XLM (7 decimals)
+  description: '100kg wheat delivery',
+  userPublicKey: connectedWallet,
+});
+
+// Sign with Freighter and submit
+const result = await signAndSubmitTransaction(transaction);
+console.log('Transaction hash:', result.hash);
+```
+
+### CI/CD Pipeline
+
+Automated deployment pipeline: [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml)
+
+**Pipeline Steps:**
+1. ✅ Test all Soroban contracts (`cargo test`)
+2. ✅ Build contracts to WASM
+3. ✅ Type-check frontend TypeScript
+4. ✅ Build Next.js production bundle
+5. ✅ Auto-deploy to Vercel on push to `main`
+
+**Latest Build:** ![CI/CD Status](https://github.com/SarthakKshirsagar01/NexuraProtocol/actions/workflows/deploy.yml/badge.svg)
+
 **Deployed Contracts (Stellar Testnet):**
 
 | Contract       | Address                                                    | Explorer                                                                                                          |
