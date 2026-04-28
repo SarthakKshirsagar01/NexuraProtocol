@@ -22,7 +22,7 @@ export const NETWORK_CONFIG = {
 } as const;
 
 // Initialize Soroban Server
-const server = new StellarSdk.SorobanRpc.Server(NETWORK_CONFIG.rpcUrl);
+const server = new StellarSdk.rpc.Server(NETWORK_CONFIG.rpcUrl);
 
 /**
  * Create Invoice
@@ -61,9 +61,9 @@ export async function createInvoice(params: {
     // Simulate transaction
     const simulated = await server.simulateTransaction(transaction);
 
-    if (StellarSdk.SorobanRpc.Api.isSimulationSuccess(simulated)) {
+    if (StellarSdk.rpc.Api.isSimulationSuccess(simulated)) {
       // Prepare for signing
-      const preparedTransaction = StellarSdk.SorobanRpc.assembleTransaction(
+      const preparedTransaction = StellarSdk.rpc.assembleTransaction(
         transaction,
         simulated,
       ).build();
@@ -116,8 +116,8 @@ export async function lockFunds(params: {
 
     const simulated = await server.simulateTransaction(transaction);
 
-    if (StellarSdk.SorobanRpc.Api.isSimulationSuccess(simulated)) {
-      const preparedTransaction = StellarSdk.SorobanRpc.assembleTransaction(
+    if (StellarSdk.rpc.Api.isSimulationSuccess(simulated)) {
+      const preparedTransaction = StellarSdk.rpc.assembleTransaction(
         transaction,
         simulated,
       ).build();
@@ -166,8 +166,8 @@ export async function verifyDelivery(params: {
 
     const simulated = await server.simulateTransaction(transaction);
 
-    if (StellarSdk.SorobanRpc.Api.isSimulationSuccess(simulated)) {
-      const preparedTransaction = StellarSdk.SorobanRpc.assembleTransaction(
+    if (StellarSdk.rpc.Api.isSimulationSuccess(simulated)) {
+      const preparedTransaction = StellarSdk.rpc.assembleTransaction(
         transaction,
         simulated,
       ).build();
@@ -214,7 +214,7 @@ export async function getInvoice(invoiceId: number) {
 
     const simulated = await server.simulateTransaction(transaction);
 
-    if (StellarSdk.SorobanRpc.Api.isSimulationSuccess(simulated)) {
+    if (StellarSdk.rpc.Api.isSimulationSuccess(simulated)) {
       return simulated.result?.retval;
     } else {
       throw new Error("Failed to fetch invoice");
