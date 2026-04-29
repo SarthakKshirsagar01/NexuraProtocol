@@ -362,21 +362,8 @@ stellar contract deploy \
 **Total: 12+ commits** ✅
 
 ---
-
-## 📄 License
-
-MIT — see [LICENSE](./LICENSE)
-
 ---
 
-## 🙏 Acknowledgments
-
-Built for the **Stellar Journey to Mastery: Monthly Builder Challenges**  
-Level 5 (Blue Belt) Submission
-
----
-
-## 🏆 Level 6 — Black Belt Submission
 
 ### ✅ Production-Ready Application
 
@@ -550,5 +537,16 @@ Level 5 (Blue Belt) Submission
 | Advanced Feature | 1 | **Multi-sig + Docs** | ✅ Proven |
 | Meaningful Commits | 30+ | **48+** | ✅ 160% |
 
-**Result:** 🏆 **ALL LEVEL 6 REQUIREMENTS MET AND EXCEEDED**
+**Result:** 🏆 **ALL LEVEL 6**
+
+## 📄 License
+
+MIT — see [LICENSE](./LICENSE)
+
+---
+
+## 🙏 Acknowledgments
+
+Built for the **Stellar Journey to Mastery: Monthly Builder Challenges**  
+
 
