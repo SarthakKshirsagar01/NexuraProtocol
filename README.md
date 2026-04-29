@@ -383,11 +383,16 @@ stellar contract deploy \
 
 | # | Name | Email | Wallet Address | Verified |
 |---|------|-------|----------------|----------|
-| 1 | [Name] | [email] | `GXXX...` | [✅](https://stellar.expert/explorer/testnet/account/GXXX) |
-| 2 | [Name] | [email] | `GXXX...` | [✅](https://stellar.expert/explorer/testnet/account/GXXX) |
-| 3 | [Name] | [email] | `GXXX...` | [✅](https://stellar.expert/explorer/testnet/account/GXXX) |
-| 4 | [Name] | [email] | `GXXX...` | [✅](https://stellar.expert/explorer/testnet/account/GXXX) |
-| 5 | [Name] | [email] | `GXXX...` | [✅](https://stellar.expert/explorer/testnet/account/GXXX) |
+| 1 | Ronit Rajaram Wadkar | ronitwadkar68@gmail.com | `GAGFDDF7DFNJLV6MXZQRL47IVTCKGKVC4FEVAJBOU3BQ2UMG4VL7FGAL` | [✅](https://stellar.expert/explorer/testnet/account/GAGFDDF7DFNJLV6MXZQRL47IVTCKGKVC4FEVAJBOU3BQ2UMG4VL7FGAL) |
+| 2 |  Khushi Ashish Shinde | shindekhushi892003@gmail.com | `GD63GPSMIMWHQ3KXRPFEE5ZMBFYIKBJRJI5AOQT5DEVGG3KMODSNEORY` | [✅](https://stellar.expert/explorer/testnet/account/GD63GPSMIMWHQ3KXRPFEE5ZMBFYIKBJRJI5AOQT5DEVGG3KMODSNEORY) |
+| 3 | Hrucha Sagar Dake | hrucha40020151@gmail.com | `GD63GPSMIMWHQ3KXRPFEE5ZMBFYIKBJRJI5AOQT5DEVGG3KMODSNEORY` | [✅](https://stellar.expert/explorer/testnet/account/GD63GPSMIMWHQ3KXRPFEE5ZMBFYIKBJRJI5AOQT5DEVGG3KMODSNEORY) |
+| 4 | Shantanu Vaishampayan | shantanusv03@gmail.com | `GBTNUVFET3ZHUZ2G7S3MG44FIVR7TO6ALBQ3FYWMI6TXBUY2AHXUFYLY` | [✅](https://stellar.expert/explorer/testnet/account/GBTNUVFET3ZHUZ2G7S3MG44FIVR7TO6ALBQ3FYWMI6TXBUY2AHXUFYLY) |
+| 5 | Deep Tukaram Tupe |3022411032@despu.edu.in | `GBA5VJS4FMLCCK3UIXPCJBG4HYEHJT2RWMHWE7OTQZVXR7RIYBX7SCVO` | [✅](https://stellar.expert/explorer/testnet/account/GBA5VJS4FMLCCK3UIXPCJBG4HYEHJT2RWMHWE7OTQZVXR7RIYBX7SCVO) |
+| 6 | Neev Agrawal |neevagrawal328@gmail.com | `GDNAKD4R742SRXC4UJTB3L2YFVEYCLYAFCQ67PZGVTT7YB2RVO2WZ5O7` | [✅](https://stellar.expert/explorer/testnet/account/GDNAKD4R742SRXC4UJTB3L2YFVEYCLYAFCQ67PZGVTT7YB2RVO2WZ5O7) |
+| 7 | yashraj borade |	yashrajborade13@gamil.com | `GBIW52SBMO2UO66HUHZXMZEYU74VNEUDZR3YNQMB4LP5WKBLK3I76EPX` | [✅](https://stellar.expert/explorer/testnet/account/GBIW52SBMO2UO66HUHZXMZEYU74VNEUDZR3YNQMB4LP5WKBLK3I76EPX) |
+| 8 |Purvai Naik |	purvai1246@gmail.com | `GBA5VJS4FMLCCK3UIXPCJBG4HYEHJT2RWMHWE7OTQZVXR7RIYBX7SCVO` | [✅](https://stellar.expert/explorer/testnet/account/GBA5VJS4FMLCCK3UIXPCJBG4HYEHJT2RWMHWE7OTQZVXR7RIYBX7SCVO) |
+| 9 | Akanksha Patil |akankshapatil2099@gmail.com | `GC4RWLUR5EOGJG3C6ZXNYCW42XXN7X45FGXIE25F2QPFBLGCL2XI5RLS` | [✅](https://stellar.expert/explorer/testnet/account/GC4RWLUR5EOGJG3C6ZXNYCW42XXN7X45FGXIE25F2QPFBLGCL2XI5RLS) |
+| 10 | 	Dhruv Patnekar |dhruv.patnekar@gmail.com | `GDM6JS7TNPNVHOMOVCDXXFVLGKVMPFVL2VBX5GTF3GVHDMV7353HTD34` | [✅](https://stellar.expert/explorer/testnet/account/GDM6JS7TNPNVHOMOVCDXXFVLGKVMPFVL2VBX5GTF3GVHDMV7353HTD34) |
 
 **Full List:** See [level6-user-data.csv](./level6-user-data.csv)
 
