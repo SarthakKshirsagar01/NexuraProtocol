@@ -234,7 +234,6 @@ Based on 35 user feedback responses, here are the key improvements implemented:
   <img src="./screenshots/mobile-homepage.png" alt="Mobile Homepage" width="45%">
 </div>
 
-*Left: Desktop view | Right: Mobile responsive design*
 
 ### Dashboard - Desktop & Mobile
 
@@ -243,7 +242,6 @@ Based on 35 user feedback responses, here are the key improvements implemented:
   <img src="./screenshots/mobile-dashboard.png" alt="Mobile Dashboard" width="45%">
 </div>
 
-*Fully optimized for mobile devices (tested on iPhone 12 Pro, Samsung Galaxy S21)*
 
 ---
 
