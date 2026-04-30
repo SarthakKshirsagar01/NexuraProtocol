@@ -1,52 +1,116 @@
-﻿# Dependencies
-node_modules/
-.npm/
-.pnp/
-.pnp.js
+﻿# NexuraProtocol .gitignore
+# Purpose: hide build artifacts, caches, and local-only files
 
-# Build outputs
-target/
-.next/
-out/
-dist/
-build/
-
-# Environment files (NEVER commit these)
-.env
-.env.local
-.env.*.local
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+########################################
+# OS / Editor / IDE
+########################################
 .DS_Store
-
-# OS files
 Thumbs.db
 desktop.ini
 
-# Logs
-*.log
+# Vim / Emacs swap files
+*~
+*.swp
+*.swo
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+########################################
+# Node / JavaScript
+########################################
+node_modules/
+.npm/
+.yarn/
+.pnp/
+.pnp.cjs
+.pnp.js
+
+# build outputs
+dist/
+build/
+out/
+.next/
+.vercel/
+.cache/
+.parcel-cache/
+.turbo/
+.expo/
+
+# bundler / package manager logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Testing
+# coverage
 coverage/
 .nyc_output/
+
+########################################
+# Rust / Cargo
+########################################
+# Cargo build directories (workspace-aware)
+target/
+**/target/
+
+# incremental compilation cache
+**/.fingerprint/
+
+# Generated WASM / wasm-pack output
+pkg/
+*.wasm
+
+########################################
+# Workspace / tool outputs
+########################################
+# Packages and build artifacts used by toolchains
+dist-ssr/
+build/
+release/
+_build/
 
 # Temporary files
 *.tmp
 *.temp
+
+########################################
+# Logs, env, secrets
+########################################
+*.log
+.env
+.env.*.local
+local.env
+secrets.json
+
+########################################
+# Test artifacts / snapshots (optional)
+coverage/
+*.local
+
+########################################
+# Misc
+########################################
+# Lockfiles are generally committed; do not ignore unless intentional
+# Ignore OS X resource forks
+._*
+
+# Keep explicit user data files tracked
+!level6-user-data.csv
+!user-feedback-responses.csv
+!LEVEL6_SUBMISSION.md
+
+# Ignore node build artifacts in subfolders
+**/node_modules/
+
+# Ignore generated debug build directories present in repo
+target/
+wasm32-unknown-unknown/
+wasm32v1-none/
+
+# Snapshots/cache folders used by tests/builds
 .cache/
+test_snapshots/
 
-# Specific project files to hide
-user-feedback-responses.tmp.csv
-
-# Keep these files visible (comment = will be tracked)
-# level6-user-data.csv
-# user-feedback-responses.csv
-# LEVEL6_SUBMISSION.md
+# End of file
