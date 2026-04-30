@@ -89,20 +89,20 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) and [DEPLOYMENT.md](./docs/DEPLOYM
 | # | User Name | User Email | User Wallet Address |
 |---|---|---|---|
 | 1 | Sarthak Kshirsagar | sarthakkshirsagar@example.com | `GDHWXGMJVAYCHUWDATDMANHES3IFQOI2I5DNI7I43DZILSKSECBMQFOH` |
-| 2 | Test User Alpha | alpha@testuser.com | `GCB7DW2DEFT3Q2KXJNZ7XBEXBNH3I5GBHHLDXGCMLTXE665TEKB4K3YF` |
-| 3 | Test User Beta | beta@testuser.com | `GA6FWTBOKCHIIZ4YHCI57AGSSYMSZ7AYSM56GBKC5LJBB6NNV7X6QPBL` |
-| 4 | Test User Gamma | gamma@testuser.com | `GCZRSTZED3PZOZ6IX5QU6NVE3ROQLG2BUGLNWZCOVQOQFHBOTXPNC4M7` |
-| 5 | Test User Delta | delta@testuser.com | `GCVR46QH3CRV3AQWPTYT2V2OOEOGVYSTEV3JIFVSVECME4IZB3DYQFOY` |
+| 2 | Chirag Pardeshi | Pardeshi97@gmail.com | `GCB7DW2DEFT3Q2KXJNZ7XBEXBNH3I5GBHHLDXGCMLTXE665TEKB4K3YF` |
+| 3 | Prathamesh Munde | prathameshmunde71@gmail.com | `GA6FWTBOKCHIIZ4YHCI57AGSSYMSZ7AYSM56GBKC5LJBB6NNV7X6QPBL` |
+| 4 | Ronit Rajaram Wadkar | ronitwadkar68@gmail.com | `GCZRSTZED3PZOZ6IX5QU6NVE3ROQLG2BUGLNWZCOVQOQFHBOTXPNC4M7` |
+| 5 | Khushi Ashish Shinde | shindekhushi892003@gmail.com | `GCVR46QH3CRV3AQWPTYT2V2OOEOGVYSTEV3JIFVSVECME4IZB3DYQFOY` |
 
 ### Table 2: Feedback Implementation (5 users)
 
 | # | User Name | User Feedback | Commit ID |
 |---|---|---|---|
 | 1 | Sarthak Kshirsagar | Wallet connection confusing in Testnet mode | [`9d90ea9`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/9d90ea9) |
-| 2 | Test User Alpha | No confirmation after invoice creation | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 3 | Test User Beta | Amount field unclear (USD or XLM) | [`f553d23`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/f553d23) |
-| 4 | Test User Gamma | Better transaction status visibility needed | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 5 | Test User Delta | Mobile UI needs improvement | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
+| 2 | Chirag Pardeshi | No confirmation after invoice creation | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+| 3 | Prathamesh Munde | Amount field unclear (USD or XLM) | [`f553d23`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/f553d23) |
+| 4 | Ronit Rajaram Wadkar | Better transaction status visibility needed | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+| 5 | Khushi Ashish Shinde | Mobile UI needs improvement | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
 
 ---
 
