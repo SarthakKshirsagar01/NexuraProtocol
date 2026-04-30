@@ -1,8 +1,8 @@
-﻿# Create/update .gitignore
-@"
-# Dependencies
+﻿# Dependencies
 node_modules/
 .npm/
+.pnp/
+.pnp.js
 
 # Build outputs
 target/
@@ -11,7 +11,7 @@ out/
 dist/
 build/
 
-# Environment files
+# Environment files (NEVER commit these)
 .env
 .env.local
 .env.*.local
@@ -22,9 +22,9 @@ build/
 *.swp
 *.swo
 *~
+.DS_Store
 
 # OS files
-.DS_Store
 Thumbs.db
 desktop.ini
 
@@ -32,16 +32,21 @@ desktop.ini
 *.log
 npm-debug.log*
 yarn-debug.log*
+yarn-error.log*
 
-# Test files (keep source, hide temp)
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
 *.tmp
-test_output.txt
+*.temp
+.cache/
+
+# Specific project files to hide
 user-feedback-responses.tmp.csv
 
-# Keep only final user data CSV
-# user-feedback-responses.csv can stay but hide temp versions
-"@ | Out-File -FilePath .gitignore -Encoding UTF8
-
-git add .gitignore
-git commit -m "chore: improve gitignore to hide build artifacts and temp files"
-git push
+# Keep these files visible (comment = will be tracked)
+# level6-user-data.csv
+# user-feedback-responses.csv
+# LEVEL6_SUBMISSION.md
