@@ -1,4 +1,6 @@
-﻿# Dependencies
+﻿# Create/update .gitignore
+@"
+# Dependencies
 node_modules/
 .npm/
 
@@ -38,3 +40,8 @@ user-feedback-responses.tmp.csv
 
 # Keep only final user data CSV
 # user-feedback-responses.csv can stay but hide temp versions
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
+
+git add .gitignore
+git commit -m "chore: improve gitignore to hide build artifacts and temp files"
+git push
