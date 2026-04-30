@@ -151,33 +151,35 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) and [DEPLOYMENT.md](./docs/DEPLOYM
 | 34 | Vedant Kashinath Tivrekar | 3512511003@despu.edu.in | `GBRYLN6E6J7IRXWLNWLSYRTGMTKBRZLILRNDVFFH2WFFAUI55AGU7MQY` |
 | 35 | Kaustubh Pravin Pawar | 3512511003@despu.edu.in | `GCYV2GYGFESSLJCTHSSMIIJKWEWE24VFRJ3MTUAVZAXFPJLMUBQGO3NC` |
 
-### Table 2: Feedback Implementation
+### Table 2: User Feedback Implementation (Level 6)
 
-| # | User Name | User Feedback | Commit ID |
-|---|---|---|---|
-| 1 | Vaishnavi Raut | Useful UI and features for real business payments | [`9d90ea9`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/9d90ea9) |
-| 2 | Akshay Yalis | Add first-time tooltip and transaction history | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 3 | Manas Shinde | Clearer wallet guidance and loading indicators | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
-| 6 | Chirag Pardeshi | Pardeshi97@gmail.com | `GCZRSTZED3PZOZ6IX5QU6NVE3ROQLG2BUGLNWZCOVQOQFHBOTXPNC4M7` | "Add a demo mode or preview option for users without wallets" | Created demo walkthrough for non-wallet users | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
-| 7 | Sarthak Kshirsagar | Kshirsagarsarthak9@gmail.com | `GCVR46QH3CRV3AQWPTYT2V2OOEOGVYSTEV3JIFVSVECME4IZB3DYQFOY` | "Real-time transaction status updates would enhance user confidence" | Built comprehensive transaction feedback system | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 8 | Ronit Rajaram Wadkar | ronitwadkar68@gmail.com | `GAGFDDF7DFNJLV6MXZQRL47IVTCKGKVC4FEVAJBOU3BQ2UMG4VL7FGAL` | "Add dashboard with key metrics" | Created comprehensive metrics dashboard | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
-| 9 | Khushi Ashish Shinde | shindekhushi892003@gmail.com | `GD63GPSMIMWHQ3KXRPFEE5ZMBFYIKBJRJI5AOQT5DEVGG3KMODSNEORY` | "Include transaction status updates" | Implemented real-time status tracking with toast notifications | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 10 | Hrucha Sagar Dake | hrucha40020151@gmail.com | `GBTNUVFET3ZHUZ2G7S3MG44FIVR7TO6ALBQ3FYWMI6TXBUY2AHXUFYLY` | "Improve UI with better design" | Complete UI overhaul with purple gradient theme | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
-| 11 | Shantanu Sudhir Vaishampayan | shantanusv03@gmail.com | `GBA5VJS4FMLCCK3UIXPCJBG4HYEHJT2RWMHWE7OTQZVXR7RIYBX7SCVO` | "Add tooltips for guidance" | Implemented interactive tooltip system throughout | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
-| 12 | Deep Tukaram Tupe | 3022411032@despu.edu.in | `GB27IHKVNBIXE4UCIC76XRLPM4UI7F7LSGSN4F45IIX5ODFVMIHF3I5H` | "Provide real-time notifications" | Added toast notification system for all actions | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 13 | Neev Agrawal | neevagrawal328@gmail.com | `GDNAKD4R742SRXC4UJTB3L2YFVEYCLYAFCQ67PZGVTT7YB2RVO2WZ5O7` | "Include invoice preview feature" | Added invoice preview before submission | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
-| 14 | Yashraj Borade | yashrajborade13@gmail.com | `GBIW52SBMO2UO66HUHZXMZEYU74VNEUDZR3YNQMB4LP5WKBLK3I76EPX` | "Add better error messages" | Implemented descriptive error messages with solutions | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
-| 15 | Purvai Naik | purvai1246@gmail.com | `GC4RWLUR5EOGJG3C6ZXNYCW42XXN7X45FGXIE25F2QPFBLGCL2XI5RLS` | "Improve mobile responsiveness" | Complete mobile UI optimization and testing | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
-| 16 | Akanksha Patil | akankshapatil2099@gmail.com | `GDM6JS7TNPNVHOMOVCDXXFVLGKVMPFVL2VBX5GTF3GVHDMV7353HTD34` | "Add progress indicators" | Added multi-step progress indicators in forms | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
-| 17 | Dhruv Patnekar | dhruv.patnekar@gmail.com | `GA34CSQVEZBEJBYRVHWQDYP4QZ3RK4IWXELW66LA3QGRDWDC3NXKW4OF` | "Provide onboarding tutorial" | Created interactive first-time user onboarding | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
-| 18 | Amaanullah Shaikh | amaanullah1605@gmail.com | `GCEEXGSNOSLPE6SG3V6OMZZSTKA6LNNQSNYAOZMDRCDEWLWFTEGVQC6W` | "Include search and filter options" | Added invoice search and filter functionality | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
-| 19 | Apurva Atul Matkar | 3512511003@despu.edu.in | `GA5BKSDLE7KESWRU3KCS6Q4PICMCH66QVIUS55H7KXMZMCZAMMD5KRRW` | "Add transaction history section" | Integrated transaction history in metrics dashboard | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
-| 20 | Yash Linesh Thakur | 3512511003@despu.edu.in | `GBUOSYTICA7BNUV6PLP4R7U6SNDRV2XCP2A46UF6ETVK2BMFUN3GJHCA` | "Improve wallet connection UX" | Streamlined wallet connection process with auto-retry | [`9d90ea9`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/9d90ea9) |
-| 21 | Kaustub Sunil Gaikwad | 3512511003@despu.edu.in | `GCGQOCGPKS6NRJIZG7BECGMCQDS7ZVWPWOKSMKV5M57E2OTGWLGBYTS7` | "Add dark mode support" | Dark mode planned for Phase 2 (user preference system) | ⏳ Planned |
-| 22 | Omkar Sanjay Pardeshi | 3512511003@despu.edu.in | `GDHYA23B54B635BRN63BG7BUKXBQW5PXWY2LH4GBOZRAQTNU7U7755RZ` | "Include download invoice (PDF)" | PDF export feature planned for Phase 2 | ⏳ Planned |
-| 23 | Chinmayee Mandar Sabnis | 3512511003@despu.edu.in | `GCLNVDEZ3SAALXOCHT6GT55BVPTP6HTGEBRVMYL5KXKHKXH4CNNREWPV` | "Add activity timeline" | Activity timeline integrated in metrics dashboard | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
-| 24 | Harsh Chandrashekhar Kirad | 3512511003@despu.edu.in | `GDL4RKQ24HBNSVXY3K46NUAEEVXLT3IBSYL4SNMRRHUI5CC4VPAADD62` | "Improve loading animations" | Added smooth loading animations throughout app | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
-| 25 | Deep Dhaku Naik | 3512511003@despu.edu.in | `GCAVINVV5PD2OXENJR3C43RY3PLNDJDAI3RRTVSZKJIDB6FGDDOAY5SI` | "Add confirmation popups" | Implemented confirmation dialogs for critical actions | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+Based on 35 user feedback responses, here are the key improvements implemented:
+
+| # | User Name | User Email | User Wallet Address | User Feedback | Implementation | Commit ID |
+|---|-----------|------------|---------------------|---------------|----------------|-----------|
+| 1 | Vaishnavi Raut | Vaishanviraut034@gmail.com | `GDLDWZJC2UDOO64K36TO3J57S6PPJRBY5S5MC6UJAHWBKW5ETSZTO6LN` | "Features and UI make this app useful for real business payments" | Enhanced UI with gradient theme and clear CTAs | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 2 | Akshay Yalis | AkshayYalis88@gmail.com | `GCB7DW2DEFT3Q2KXJNZ7XBEXBNH3I5GBHHLDXGCMLTXE665TEKB4K3YF` | "Adding a small guide or tooltip for first-time users would make it even better" | Added interactive tooltips throughout the app | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 3 | Manas Shinde | Manas171414@gmail.com | `GA6FWTBOKCHIIZ4YHCI57AGSSYMSZ7AYSM56GBKC5LJBB6NNV7X6QPBL` | "Loading indicators would improve experience" | Added loading spinners and progress bars | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
+| 4 | Chirag Pardeshi | Pardeshi97@gmail.com | `GCZRSTZED3PZOZ6IX5QU6NVE3ROQLG2BUGLNWZCOVQOQFHBOTXPNC4M7` | "Add a demo mode or preview option for users without wallets" | Created demo walkthrough for non-wallet users | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 5 | Sarthak Kshirsagar | Kshirsagarsarthak9@gmail.com | `GCVR46QH3CRV3AQWPTYT2V2OOEOGVYSTEV3JIFVSVECME4IZB3DYQFOY` | "Real-time transaction status updates would enhance user confidence" | Built comprehensive transaction feedback system | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+| 6 | Ronit Rajaram Wadkar | ronitwadkar68@gmail.com | `GAGFDDF7DFNJLV6MXZQRL47IVTCKGKVC4FEVAJBOU3BQ2UMG4VL7FGAL` | "Add dashboard with key metrics" | Created comprehensive metrics dashboard | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
+| 7 | Khushi Ashish Shinde | shindekhushi892003@gmail.com | `GD63GPSMIMWHQ3KXRPFEE5ZMBFYIKBJRJI5AOQT5DEVGG3KMODSNEORY` | "Include transaction status updates" | Implemented real-time status tracking with toast notifications | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+| 8 | Hrucha Sagar Dake | hrucha40020151@gmail.com | `GBTNUVFET3ZHUZ2G7S3MG44FIVR7TO6ALBQ3FYWMI6TXBUY2AHXUFYLY` | "Improve UI with better design" | Complete UI overhaul with purple gradient theme | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 9 | Shantanu Sudhir Vaishampayan | shantanusv03@gmail.com | `GBA5VJS4FMLCCK3UIXPCJBG4HYEHJT2RWMHWE7OTQZVXR7RIYBX7SCVO` | "Add tooltips for guidance" | Implemented interactive tooltip system throughout | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 10 | Deep Tukaram Tupe | 3022411032@despu.edu.in | `GB27IHKVNBIXE4UCIC76XRLPM4UI7F7LSGSN4F45IIX5ODFVMIHF3I5H` | "Provide real-time notifications" | Added toast notification system for all actions | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+| 11 | Neev Agrawal | neevagrawal328@gmail.com | `GDNAKD4R742SRXC4UJTB3L2YFVEYCLYAFCQ67PZGVTT7YB2RVO2WZ5O7` | "Include invoice preview feature" | Added invoice preview before submission | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 12 | Yashraj Borade | yashrajborade13@gmail.com | `GBIW52SBMO2UO66HUHZXMZEYU74VNEUDZR3YNQMB4LP5WKBLK3I76EPX` | "Add better error messages" | Implemented descriptive error messages with solutions | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
+| 13 | Purvai Naik | purvai1246@gmail.com | `GC4RWLUR5EOGJG3C6ZXNYCW42XXN7X45FGXIE25F2QPFBLGCL2XI5RLS` | "Improve mobile responsiveness" | Complete mobile UI optimization and testing | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
+| 14 | Akanksha Patil | akankshapatil2099@gmail.com | `GDM6JS7TNPNVHOMOVCDXXFVLGKVMPFVL2VBX5GTF3GVHDMV7353HTD34` | "Add progress indicators" | Added multi-step progress indicators in forms | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
+| 15 | Dhruv Patnekar | dhruv.patnekar@gmail.com | `GA34CSQVEZBEJBYRVHWQDYP4QZ3RK4IWXELW66LA3QGRDWDC3NXKW4OF` | "Provide onboarding tutorial" | Created interactive first-time user onboarding | [`351ab61`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/351ab61) |
+| 16 | Amaanullah Shaikh | amaanullah1605@gmail.com | `GCEEXGSNOSLPE6SG3V6OMZZSTKA6LNNQSNYAOZMDRCDEWLWFTEGVQC6W` | "Include search and filter options" | Added invoice search and filter functionality | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
+| 17 | Apurva Atul Matkar | 3512511003@despu.edu.in | `GA5BKSDLE7KESWRU3KCS6Q4PICMCH66QVIUS55H7KXMZMCZAMMD5KRRW` | "Add transaction history section" | Integrated transaction history in metrics dashboard | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
+| 28 | Yash Linesh Thakur | 3512511003@despu.edu.in | `GBUOSYTICA7BNUV6PLP4R7U6SNDRV2XCP2A46UF6ETVK2BMFUN3GJHCA` | "Improve wallet connection UX" | Streamlined wallet connection process with auto-retry | [`9d90ea9`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/9d90ea9) |
+| 19 | Kaustub Sunil Gaikwad | 3512511003@despu.edu.in | `GCGQOCGPKS6NRJIZG7BECGMCQDS7ZVWPWOKSMKV5M57E2OTGWLGBYTS7` | "Add dark mode support" | Dark mode planned for Phase 2 (user preference system) | ⏳ Planned |
+| 20 | Omkar Sanjay Pardeshi | 3512511003@despu.edu.in | `GDHYA23B54B635BRN63BG7BUKXBQW5PXWY2LH4GBOZRAQTNU7U7755RZ` | "Include download invoice (PDF)" | PDF export feature planned for Phase 2 | ⏳ Planned |
+| 21 | Chinmayee Mandar Sabnis | 3512511003@despu.edu.in | `GCLNVDEZ3SAALXOCHT6GT55BVPTP6HTGEBRVMYL5KXKHKXH4CNNREWPV` | "Add activity timeline" | Activity timeline integrated in metrics dashboard | [`12e8f3a`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/12e8f3a) |
+| 22 | Harsh Chandrashekhar Kirad | 3512511003@despu.edu.in | `GDL4RKQ24HBNSVXY3K46NUAEEVXLT3IBSYL4SNMRRHUI5CC4VPAADD62` | "Improve loading animations" | Added smooth loading animations throughout app | [`2abedd0`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/2abedd0) |
+| 23 | Deep Dhaku Naik | 3512511003@despu.edu.in | `GCAVINVV5PD2OXENJR3C43RY3PLNDJDAI3RRTVSZKJIDB6FGDDOAY5SI` | "Add confirmation popups" | Implemented confirmation dialogs for critical actions | [`d928948`](https://github.com/SarthakKshirsagar01/NexuraProtocol/commit/d928948) |
 
 ### Summary of Feedback Implementation
 
@@ -219,6 +221,8 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) and [DEPLOYMENT.md](./docs/DEPLOYM
 **Result:** User satisfaction improved from 3.8/5 (initial) to 4.5/5 (after iterations)
 
 **Full Feedback Export:** [user-feedback-responses.csv](./user-feedback-responses.csv)
+
+---
 
 
 ## 📱 Application Screenshots
