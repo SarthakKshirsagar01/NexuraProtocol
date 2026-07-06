@@ -111,10 +111,10 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) and [DEPLOYMENT.md](./docs/DEPLOYM
 
 ## Level 6 Section
 
-### Table 1: User Info (35 users)
+### Table 1: User Info (60+ users)
 
-**Total Users:** 35 (117% of requirement)  
-**Full CSV:** [level6-user-data.csv](./level6-user-data.csv)
+**Total Users:** 67 (117% of requirement)  
+**Full CSV:** [level6-user-data.csv](.https://docs.google.com/spreadsheets/d/1wQfRul0fVM_F2ubcs0Dty4cIWO9QSBEse2-d8n8ZLpU/edit?usp=sharing)
 
 | #   | User Name                    | User Email                            | User Wallet Address                                        |
 | --- | ---------------------------- | ------------------------------------- | ---------------------------------------------------------- |
